@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<title>Sparks!</title>
+	<script type="text/javascript" src="underscore.js"></script>
+	<script type="text/javascript" src="d3.v3.js" charset="utf-8"></script>
+	<script type="text/javascript" src="sparks.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+	<style type="text/css">
+
+		.sparkline path {
+			stroke: blue	;
+		}
+	</style>
+</head>
+<body>
+	<div id="sparkline"></div>
+
+	<script type="text/javascript">
+		var sparkline = (new sparks.Sparkline({
+			data: [[0,1], [1,2], [2, 3]],
+			width: 300,
+			height: 200
+		})).render();
+		document.getElementById('sparkline')
+			.appendChild(sparkline.el);
+	</script>
+</body>
+</html>
